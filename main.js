@@ -78,7 +78,7 @@ class Game {
         const index = combination[j];
         if (this.board[index] !== this.currentPlayer) {
           isWinning = false;
-          break
+          break;
         }
       }
 
@@ -86,8 +86,27 @@ class Game {
         this.gameOver = true;
         return true;
       }
-
     }
     return false;
+  }
+
+  boardIsFull() {
+    for (let i = 0; i < this.board.length; i++) {
+      const cell = this.board[i];
+      if (cell === " ") {
+        return false;
+      }
+    }
+    this.gameOver = true;
+    return true;
+  }
+
+  switchPlayer() {
+    this.currentPlayer = this.currentPlayer === "X" ? "O" : "X";
+    return this.currentPlayer;
+  }
+
+  validMove(move) {
+    return move >= 0 && move <= 8 && this.board[move] === " ";
   }
 }
