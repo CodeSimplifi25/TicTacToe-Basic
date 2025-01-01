@@ -10,16 +10,18 @@ A simple console-based Tic Tac Toe game built with JavaScript. This game allows 
 5. Ends the game when there's a winner or when all cells are filled (tie game).
 
 ## Installation
-1. Clone the repository to your local machine:
-> git clone https://github.com/your-username/tic-tac-toe.git
+1. Click the "Fork" button at the top right of this repository to create a copy of the repository under your own GitHub account.
 
-2. Navigate to the project directory:
+2. Clone the repository to your local machine:
+> git clone https://github.com/your-username/TicTacToe-Basic.git
+
+3. Navigate to the project directory:
 > cd tic-tac-toe
 
-3. Install the required dependencies:
+4. Install the required dependencies:
 > npm install prompt-sync
 
-4. Run the game:
+5. Run the game:
 > node main.js
 
 ## How to Play
