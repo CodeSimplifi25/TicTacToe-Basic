@@ -112,3 +112,6 @@ class Game {
     return move >= 0 && move <= 8 && this.board[move] === " ";
   }
 }
+
+const game = new Game();
+game.play();
