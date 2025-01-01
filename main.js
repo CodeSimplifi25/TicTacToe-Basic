@@ -45,4 +45,27 @@ class Game {
       }
     }
   }
+
+  displayBoard() {
+    console.log("\n");
+    console.log(` ${this.board[0]} | ${this.board[1]} | ${this.board[2]} `);
+    console.log("---+---+---");
+    console.log(` ${this.board[3]} | ${this.board[4]} | ${this.board[5]} `);
+    console.log("---+---+---");
+    console.log(` ${this.board[6]} | ${this.board[7]} | ${this.board[8]} `);
+    console.log("\n");
+  }
+
+  playerPick() {
+    // 1. Prompt Input
+    console.log(`Player ${this.currentPlayer}, enter your move (1-9)`);
+    const move = parseInt(prompt()) - 1;
+    // 2. Validate Move
+    if (this.validMove(move)) {
+      this.board[move] = this.currentPlayer;
+    } else {
+      console.log("Invalid move! Try again.");
+      this.playerPick();
+    }
+  }
 }
