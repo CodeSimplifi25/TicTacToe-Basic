@@ -1,3 +1,5 @@
+const prompt = require("prompt-sync")();
+
 class Game {
   constructor() {
     // Initialize the board
