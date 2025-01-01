@@ -68,4 +68,26 @@ class Game {
       this.playerPick();
     }
   }
+
+  isWin() {
+    for (let i = 0; i < this.winningCombinations.length; i++) {
+      const combination = this.winningCombinations[i];
+      let isWinning = true;
+
+      for (let j = 0; j < combination.length; j++) {
+        const index = combination[j];
+        if (this.board[index] !== this.currentPlayer) {
+          isWinning = false;
+          break
+        }
+      }
+
+      if (isWinning) {
+        this.gameOver = true;
+        return true;
+      }
+
+    }
+    return false;
+  }
 }
