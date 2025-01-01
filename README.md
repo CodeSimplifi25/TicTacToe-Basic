@@ -16,7 +16,7 @@ A simple console-based Tic Tac Toe game built with JavaScript. This game allows 
 > git clone https://github.com/your-username/TicTacToe-Basic.git
 
 3. Navigate to the project directory:
-> cd tic-tac-toe
+> cd TicTacToe-Basic
 
 4. Install the required dependencies:
 > npm install prompt-sync
